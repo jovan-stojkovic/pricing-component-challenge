@@ -20,7 +20,7 @@ $Dark-Grayish-Blue: hsl(232, 13%, 33%);
 }
 
 main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: $Very-Light-Grayish-Blue;
   display: flex;
@@ -149,7 +149,7 @@ main {
     &.center {
       background-image: linear-gradient(to bottom right, $Linear-Gradient);
       height: 500px;
-      
+
       h2 {
         color: white;
       }
@@ -217,9 +217,9 @@ main {
   position: relative;
   cursor: pointer;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .checkbox-wrapper-7 .tgl + .tgl-btn:after,
 .checkbox-wrapper-7 .tgl + .tgl-btn:before {
@@ -249,7 +249,8 @@ main {
 .checkbox-wrapper-7 .tgl-ios + .tgl-btn:after {
   border-radius: 2em;
   background: #fbfbfb;
-  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+  transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    padding 0.3s ease, margin 0.3s ease;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 4px 0 rgba(0, 0, 0, 0.08);
 }
 .checkbox-wrapper-7 .tgl-ios + .tgl-btn:hover:after {
@@ -275,5 +276,21 @@ main {
   filter: opacity(60%);
 }
 
+//responsiveness
+@media (max-width: 1050px) {
+  main {
+    height: 1800px;
+    .app {
+      width: 350px;
+    }
 
-//responsivnes
+    .info-container {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    #center-purple {
+      height: 450px;
+    }
+  }
+}

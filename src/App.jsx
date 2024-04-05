@@ -54,7 +54,7 @@ const App = () => {
             <button className="side-btn">LEARN MORE</button>
           </div>
 
-          <div className="side center">
+          <div className="side center" id="center-purple">
             <h2>Professional</h2>
             <h3 className="price">
               <span>$</span>
